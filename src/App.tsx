@@ -14,9 +14,6 @@ function App() {
                "aside main"
                "footer footer"`,
         }}
-        gridTemplateRows={"60px 1fr 30px"}
-        gridTemplateColumns={"150px 1fr"}
-        h="200px"
         gap="1"
         color="blackAlpha.700"
         fontWeight="bold"
