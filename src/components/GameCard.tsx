@@ -19,7 +19,7 @@ type Props = {
 
 const GameCard = ({ game }: Props) => {
   return (
-    <Card overflow="hidden">
+    <Card>
       <Image
         src={optimizeImage(game.background_image)}
         alt="Green double couch with wooden legs"
