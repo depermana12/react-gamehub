@@ -11,6 +11,7 @@ import PlatformIconList from "./PlatformIconList";
 
 import { Game } from "../types.ts/type";
 import CriticScore from "./CriticScore";
+import optimizeImage from "../services/optimizeImage";
 
 type Props = {
   game: Game;
@@ -20,7 +21,7 @@ const GameCard = ({ game }: Props) => {
   return (
     <Card overflow="hidden">
       <Image
-        src={game.background_image}
+        src={optimizeImage(game.background_image)}
         alt="Green double couch with wooden legs"
       />
       <CardBody>
