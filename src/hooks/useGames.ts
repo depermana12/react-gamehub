@@ -11,11 +11,13 @@ type FetchGamesResponse = {
 const useGames = () => {
   const [games, setGames] = useState<Game[]>([]);
   const [error, setError] = useState("");
+  const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
     const controller = new AbortController();
     const getGames = async () => {
       try {
+        setLoading(true);
         const res = await apiClient.get<FetchGamesResponse>("/games", {
           signal: controller.signal,
         });
@@ -23,6 +25,8 @@ const useGames = () => {
       } catch (error) {
         if (error instanceof CanceledError) return;
         setError((error as Error).message);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -31,6 +35,6 @@ const useGames = () => {
     return () => controller.abort();
   }, []);
 
-  return { games, error };
+  return { games, error, isLoading };
 };
 export default useGames;
