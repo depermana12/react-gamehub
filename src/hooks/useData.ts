@@ -1,5 +1,5 @@
 import { AxiosRequestConfig, CanceledError } from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, DependencyList } from "react";
 import apiClient from "../services/apiClien";
 
 type FetchResponse<T> = {
