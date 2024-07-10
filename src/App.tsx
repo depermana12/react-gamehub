@@ -15,8 +15,6 @@ function App() {
                "footer footer"`,
         }}
         gap="1"
-        color="blackAlpha.700"
-        fontWeight="bold"
       >
         <GridItem pl="2" bg="orange.300" area={"nav"}>
           <NavBar />
