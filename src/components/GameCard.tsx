@@ -5,21 +5,12 @@ import {
   Button,
   Image,
   Heading,
+  HStack,
 } from "@chakra-ui/react";
 import PlatformIconList from "./PlatformIconList";
 
-type Platform = {
-  id: number;
-  name: string;
-  slug: string;
-};
-
-type Game = {
-  id: number;
-  name: string;
-  background_image: string;
-  parent_platforms: { platform: Platform }[];
-};
+import { Game } from "../types.ts/type";
+import CriticScore from "./CriticScore";
 
 type Props = {
   game: Game;
@@ -34,9 +25,12 @@ const GameCard = ({ game }: Props) => {
       />
       <CardBody>
         <Heading size="md">{game.name}</Heading>
-        <PlatformIconList
-          platforms={game.parent_platforms.map((p) => p.platform)}
-        />
+        <HStack justifyContent="space-between">
+          <PlatformIconList
+            platforms={game.parent_platforms.map((p) => p.platform)}
+          />
+          <CriticScore score={game.metacritic} />
+        </HStack>
       </CardBody>
       <CardFooter>
         <Button variant="solid" colorScheme="blue">

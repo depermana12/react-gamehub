@@ -8,16 +8,11 @@ import {
   FaLinux,
   FaAndroid,
 } from "react-icons/fa";
-
 import { MdPhoneIphone } from "react-icons/md";
 import { SiNintendo } from "react-icons/si";
 import { BsGlobe } from "react-icons/bs";
 
-type Platform = {
-  id: number;
-  name: string;
-  slug: string;
-};
+import { Platform } from "../types.ts/type";
 
 type Props = {
   platforms: Platform[];
