@@ -28,7 +28,11 @@ function App() {
         gap="1"
       >
         <GridItem pl="2" bg="orange.300" area={"nav"}>
-          <NavBar />
+          <NavBar
+            onSearch={(searchText) =>
+              setGameQuery({ ...gameQuery, searchText })
+            }
+          />
         </GridItem>
         <Show above="lg">
           <GridItem paddingX={5} bg="pink.300" area={"aside"}>
