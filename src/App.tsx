@@ -7,6 +7,7 @@ import { GameQuery } from "./types.ts/type";
 import PlatformSelector from "./components/PlatformSelector";
 import SortSelector from "./components/SortSelector";
 import GameHeading from "./components/GameHeading";
+import Footer from "./components/Footer";
 
 function App() {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
@@ -62,7 +63,7 @@ function App() {
           <GameGrid gameQuery={gameQuery} />
         </GridItem>
         <GridItem pl="2" bg="blue.300" area={"footer"}>
-          Footer
+          <Footer />
         </GridItem>
       </Grid>
     </>
