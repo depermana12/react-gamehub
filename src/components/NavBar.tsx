@@ -9,7 +9,7 @@ type Props = {
 
 const NavBar = ({ onSearch }: Props) => {
   return (
-    <HStack paddingX="10px">
+    <HStack paddingX="10px" boxShadow="md">
       <Image src={logo} boxSize="60px" alt="gamehub logo" />
       <SearchInput onSearch={onSearch} />
       <ColorModeSwitch />

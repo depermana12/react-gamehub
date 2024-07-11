@@ -29,7 +29,7 @@ function App() {
         }}
         gap="1"
       >
-        <GridItem pl="2" bg="orange.300" area={"nav"}>
+        <GridItem pl="2" area="nav">
           <NavBar
             onSearch={(searchText) =>
               setGameQuery({ ...gameQuery, searchText })
@@ -37,14 +37,14 @@ function App() {
           />
         </GridItem>
         <Show above="lg">
-          <GridItem paddingX={5} bg="pink.300" area={"aside"}>
+          <GridItem paddingX={5} area="aside">
             <GenreList
               selectedGenre={gameQuery.genre}
               onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })}
             />
           </GridItem>
         </Show>
-        <GridItem bg="green.300" area={"main"}>
+        <GridItem area="main">
           <GameHeading gameQuery={gameQuery} />
           <HStack spacing={5} paddingLeft={2} marginY={5}>
             <PlatformSelector
@@ -62,7 +62,7 @@ function App() {
           </HStack>
           <GameGrid gameQuery={gameQuery} />
         </GridItem>
-        <GridItem pl="2" bg="blue.300" area={"footer"}>
+        <GridItem pl="2" area="footer">
           <Footer />
         </GridItem>
       </Grid>
