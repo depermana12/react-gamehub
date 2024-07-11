@@ -6,6 +6,7 @@ import { useState } from "react";
 import { GameQuery } from "./types.ts/type";
 import PlatformSelector from "./components/PlatformSelector";
 import SortSelector from "./components/SortSelector";
+import GameHeading from "./components/GameHeading";
 
 function App() {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
@@ -43,6 +44,7 @@ function App() {
           </GridItem>
         </Show>
         <GridItem bg="green.300" area={"main"}>
+          <GameHeading gameQuery={gameQuery} />
           <HStack spacing={5} paddingLeft={2} marginY={5}>
             <PlatformSelector
               selectedPlatform={gameQuery.platform}
