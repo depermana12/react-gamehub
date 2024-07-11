@@ -24,7 +24,7 @@ function App() {
         }}
         templateColumns={{
           base: "1fr",
-          lg: "250px 1fr",
+          lg: "230px 1fr",
         }}
         gap="1"
       >

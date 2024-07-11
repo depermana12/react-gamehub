@@ -36,7 +36,7 @@ const SearchInput = ({ onSearch }: Props) => {
           variant="filled"
           placeholder="Search games..."
         />
-        <InputRightElement paddingRight={10}>
+        <InputRightElement paddingX={10}>
           <Kbd>Ctrl</Kbd> + <Kbd>K</Kbd>
         </InputRightElement>
       </InputGroup>
