@@ -1,6 +1,5 @@
-import { Genre } from "../types.ts/type";
-import useData from "./useData";
+import genres from "../data/genres";
 
-const useGenres = () => useData<Genre>("/genres");
+const useGenres = () => ({ data: genres, isLoading: null, error: null });
 
 export default useGenres;
