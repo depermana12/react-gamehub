@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import PlatformIconList from "./PlatformIconList";
 
-import { Game } from "../types.ts/type";
+import { Game } from "../types/type";
 import CriticScore from "./CriticScore";
 import optimizeImage from "../services/optimizeImage";
 

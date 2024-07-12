@@ -9,7 +9,7 @@ import {
 import useGenres from "../hooks/useGenres";
 import optimizeImage from "../services/optimizeImage";
 import GenreListSkeleton from "./GenreListSkeleton";
-import { Genre } from "../types.ts/type";
+import { Genre } from "../types/type";
 
 type Props = {
   onSelectGenre: (genre: Genre) => void;
