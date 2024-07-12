@@ -29,7 +29,7 @@ function App() {
         }}
         gap="1"
       >
-        <GridItem pl="2" area="nav">
+        <GridItem area="nav">
           <NavBar
             onSearch={(searchText) =>
               setGameQuery({ ...gameQuery, searchText })
@@ -62,7 +62,7 @@ function App() {
           </HStack>
           <GameGrid gameQuery={gameQuery} />
         </GridItem>
-        <GridItem pl="2" area="footer">
+        <GridItem area="footer">
           <Footer />
         </GridItem>
       </Grid>
