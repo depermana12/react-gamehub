@@ -26,3 +26,8 @@ export type GameQuery = {
   sortOrder: string;
   searchText: string;
 };
+
+export type FetchResponse<T> = {
+  count: number;
+  results: T[];
+};
