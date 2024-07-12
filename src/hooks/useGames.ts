@@ -1,14 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
-import { Game, GameQuery } from "../types/type";
-import APIClient from "../services/apiClient";
-
-const apiClient = new APIClient<Game>("/games");
+import { GameQuery } from "../types/type";
+import gameService from "../services/gameService";
 
 const useGames = (gameQuery: GameQuery) =>
   useQuery({
     queryKey: ["games", gameQuery],
     queryFn: () =>
-      apiClient.getAll({
+      gameService.getAll({
         params: {
           genres: gameQuery.genre?.id,
           parent_platforms: gameQuery.platform?.id,
