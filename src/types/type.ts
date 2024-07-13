@@ -29,5 +29,6 @@ export type GameQuery = {
 
 export type FetchResponse<T> = {
   count: number;
+  next: string | null;
   results: T[];
 };
