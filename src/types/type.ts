@@ -21,8 +21,8 @@ export type Genre = {
 };
 
 export type GameQuery = {
-  genre: Genre | null;
-  platform: Platform | null;
+  genreId?: number;
+  platformId?: number;
   sortOrder: string;
   searchText: string;
 };

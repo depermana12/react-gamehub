@@ -8,8 +8,8 @@ const useGames = (gameQuery: GameQuery) =>
     queryFn: ({ pageParam = 1 }) =>
       gameService.getAll({
         params: {
-          genres: gameQuery.genre?.id,
-          parent_platforms: gameQuery.platform?.id,
+          genres: gameQuery.genreId,
+          parent_platforms: gameQuery.platformId,
           ordering: gameQuery.sortOrder,
           search: gameQuery.searchText,
           page: pageParam,
@@ -19,6 +19,7 @@ const useGames = (gameQuery: GameQuery) =>
     getNextPageParam: (lastPage, allPages) => {
       return lastPage ? allPages.length + 1 : null;
     },
+    staleTime: 23 * 60 * 60 * 1000, //24h
   });
 
 export default useGames;
